@@ -1,0 +1,18 @@
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+}
+
+li {
+  list-style: none;
+}
+
+.field {
+  height: 50px;
+  width: 50px;
+}
+
+.field[data-won="true"] {
+  background: green;
+}
