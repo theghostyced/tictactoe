@@ -9,7 +9,7 @@ import 'styles/index.scss'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/'>
       <Scene />
     </Router>
   </React.StrictMode>,
