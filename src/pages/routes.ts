@@ -7,16 +7,16 @@ export interface RouteType {
   component: React.ElementType;
 }
 
-// holds all our give route paths and
+// Holds all our give route paths and
 // exposes it to the entire app for easy reusability
 export const routePaths = {
   startScreen: '/',
   playerSelect: '/playerselect'
 };
 
-// apps routes which will be mapped through and passed into our
+// Apps routes which will be mapped through and passed into our
 // `Route` component from react-router-dom
-// https://reactrouter.com/web/api/Route
+// Learn more about it here => https://reactrouter.com/web/api/Route
 const routes = [
   {
     path: routePaths.startScreen,
