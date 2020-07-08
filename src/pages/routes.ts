@@ -20,7 +20,7 @@ export const routePaths = {
 const routes = [
   {
     path: routePaths.startScreen,
-    component: StartScreen,
+    component: StartScreen
   },
   {
     path: routePaths.playerSelect,
