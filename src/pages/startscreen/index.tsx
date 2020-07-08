@@ -4,7 +4,7 @@ import React from 'react';
 import StartScreenMachine from './machine';
 
 const StartScreen: React.FC = () => {
-  return <StartScreenContainer machine={StartScreenMachine} />
-}
+  return <StartScreenContainer machine={StartScreenMachine} />;
+};
 
-export default StartScreen
+export default StartScreen;

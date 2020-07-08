@@ -20,7 +20,7 @@ const StartScreenMachine = createMachine<StartScreenContext>({
   states: {
     start_game: {
       on: {
-        [StartScreenMachineStates.START_GAME]: StartScreenMachineStates.GAME_STARTED.toLowerCase(),
+        [StartScreenMachineStates.GAME_STARTED]: StartScreenMachineStates.GAME_STARTED.toLowerCase(),
       }
     },
 
