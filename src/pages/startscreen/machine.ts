@@ -2,32 +2,49 @@ import { assign, createMachine } from 'xstate';
 
 export const StartScreenMachineStates = {
   START_GAME: 'START_GAME',
+  GAME_STARTED: 'GAME_STARTED',
+  END_GAME: 'END_GAME'
 };
 
-interface StartScreenContext {
+export interface StartScreenContext {
   started_game: boolean;
 }
 
 const StartScreenMachine = createMachine<StartScreenContext>({
   id: 'startscreen',
-  initial: 'start_game',
+  initial: StartScreenMachineStates.START_GAME.toLowerCase(),
   context: {
     started_game: false,
   },
+
   states: {
     start_game: {
       on: {
-        [StartScreenMachineStates.START_GAME]: "game_started"
+        [StartScreenMachineStates.START_GAME]: StartScreenMachineStates.GAME_STARTED.toLowerCase(),
       }
     },
+
+
     game_started: {
       entry: assign({
         started_game: (ctx: StartScreenContext) => !ctx.started_game
       }),
+
+      on: {
+        // ends the game and resets our started game context to false
+        [StartScreenMachineStates.END_GAME]: {
+          target: StartScreenMachineStates.END_GAME.toLowerCase(),
+          actions: assign((ctx: StartScreenContext) => {
+            return {
+              started_game: false
+            }
+          })
+        }
+      }
     },
-    exit: {
-      entry: ''
-    }
+
+
+    end_game: {},
   }
 })
 
