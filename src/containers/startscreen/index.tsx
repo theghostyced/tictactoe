@@ -22,7 +22,8 @@ const StartScreenContainer: React.FC<IProps> = ({ machine }) => {
   };
 
   return (
-    <div>
+    <div role="group">
+      <h1>Click here to start game</h1>
       {state.matches(StartScreenMachineStates.START_GAME.toLowerCase()) && (
         <button onClick={handleClick}>Start Game</button>
       )}
