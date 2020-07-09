@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.tsx';
+import { BrowserRouter as Router } from 'react-router-dom'
+
 import * as serviceWorker from './serviceWorker';
+import Scene from './Scene.tsx';
+
+import 'styles/index.scss'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router basename='/'>
+      <Scene />
+    </Router>
   </React.StrictMode>,
   document.getElementById('scene')
 );
