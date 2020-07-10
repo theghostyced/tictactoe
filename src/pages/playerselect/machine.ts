@@ -14,7 +14,7 @@ export interface PlayerEvent {
   player_type: string | null;
 }
 
-const PlayerSelectMachine = createMachine<PlayerSelectContext>({
+const PlayerSelectMachine = createMachine<PlayerSelectContext, PlayerEvent>({
   id: 'playerselect',
   initial: PlayerSelectMachineStates.PLAYER_SELECT.toLowerCase(),
   context: {
