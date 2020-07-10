@@ -14,22 +14,37 @@ interface IProps {
 }
 
 const PlayerSelectContainer: React.FC<IProps> = ({ machine }) => {
-  const [state, send] = useMachine<PlayerSelectContext, PlayerEvent>(machine);
+  const [, send] = useMachine<PlayerSelectContext, PlayerEvent>(machine);
   const history = useHistory();
 
-  const handleClick = (character: string) => {
+  const handleSelect = (event: any) => {
     send({
       type: PlayerSelectMachineStates.PLAYER_SELECTED,
-      player_type: character,
+      player_type: event.target.value,
     });
-
-    history.push(routePaths.gameScene);
   };
+
+  const handleConfirm = () => history.push(routePaths.gameScene);
 
   return (
     <div role="group">
-      <button onClick={() => handleClick('X')}>X</button>
-      <button onClick={() => handleClick('O')}>O</button>
+      <label htmlFor="player-X">X</label>
+      <input
+        id="player-X"
+        name="radio"
+        type="radio"
+        onChange={handleSelect}
+        value={'X'}
+      />
+      <label htmlFor="player-O">O</label>
+      <input
+        id="player-O"
+        name="radio"
+        type="radio"
+        onChange={handleSelect}
+        value={'O'}
+      />
+      <button onClick={() => handleConfirm()}>Confirm</button>
     </div>
   );
 };

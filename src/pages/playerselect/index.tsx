@@ -1,7 +1,9 @@
 import React from 'react';
+import PlayerSelectContainer from 'containers/playerselect';
+import PlayerSelectMachine from './machine';
 
 const PlayerSelectScreen = () => {
-  return <div>Player Select</div>;
+  return <PlayerSelectContainer machine={PlayerSelectMachine}/>;
 };
 
 export default PlayerSelectScreen;
