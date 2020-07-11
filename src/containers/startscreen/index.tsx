@@ -1,5 +1,6 @@
 import { routePaths } from 'pages/routes';
 import { StartScreenMachineStates } from 'pages/startscreen/machine';
+import Navbar from 'presentational/navbar';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -23,10 +24,10 @@ const StartScreenContainer: React.FC<IProps> = ({ machine }) => {
 
   return (
     <div role="group">
-      <h1>Click here to start game</h1>
-      {state.matches(StartScreenMachineStates.START_GAME.toLowerCase()) && (
+      <Navbar />
+      {/* {state.matches(StartScreenMachineStates.START_GAME.toLowerCase()) && (
         <button onClick={handleClick}>Start Game</button>
-      )}
+      )} */}
     </div>
   );
 };

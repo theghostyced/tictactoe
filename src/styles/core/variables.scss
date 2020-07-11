@@ -1,0 +1,13 @@
+@use 'core/function' as *;
+
+$grid: rem(1192);
+$grid-mobile: rem(375);
+$gap: rem(ratio(4));
+$gap-mobile: rem(16);
+$media-mobile: rem(1023);
+$media-desktop: rem(1024);
+$gap-percentage: percentage($gap / $grid);
+$gap-percentage-mobile: percentage($gap-mobile / $grid-mobile);
+
+$flex-justify-options: 'space-between', 'center', 'start', 'end', 'space-evenly', 'space-around', 'normal';
+$flex-align-options: 'normal', 'center', 'flex-start', 'flex-end', 'revert';

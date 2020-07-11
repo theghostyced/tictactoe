@@ -1,0 +1,25 @@
+@use 'core/function' as c;
+@use 'core/variables' as *;
+
+@mixin outline {
+  outline: none;
+  box-shadow: 0 0 c.rem(8) var(--yellow-2);
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$media-mobile}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$media-desktop}) {
+    @content;
+  }
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

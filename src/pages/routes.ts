@@ -11,7 +11,8 @@ export interface RouteType {
 // exposes it to the entire app for easy reusability
 export const routePaths = {
   startScreen: '/',
-  playerSelect: '/playerselect'
+  playerSelect: '/playerselect',
+  gameScene: '/game'
 };
 
 // Apps routes which will be mapped through and passed into our

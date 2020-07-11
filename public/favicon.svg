@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="485" viewBox="0 0 420 485">
+  <g id="Group_3" data-name="Group 3" transform="translate(-1063 607)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="420" height="485" rx="10" transform="translate(1063 -607)" fill="#26265c"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="188" height="180" rx="10" transform="translate(1086 -403)" fill="#4b4973"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="188" height="180" rx="10" transform="translate(1282 -593)" fill="#4b4973"/>
+    <g id="Group_1" data-name="Group 1">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="188" height="180" rx="10" transform="translate(1282 -403)" fill="#fd956a"/>
+      <path id="Rectangle_7" data-name="Rectangle 7" d="M0,0H188a0,0,0,0,1,0,0V0a10,10,0,0,1-10,10H10A10,10,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(1282 -233)" fill="#a25b3c"/>
+    </g>
+    <g id="Group_2" data-name="Group 2">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="188" height="180" rx="10" transform="translate(1086 -593)" fill="#e970ac"/>
+      <path id="Rectangle_8" data-name="Rectangle 8" d="M0,0H188a0,0,0,0,1,0,0V0a10,10,0,0,1-10,10H10A10,10,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(1086 -423)" fill="#8f4269"/>
+    </g>
+    <text id="X" transform="translate(1180 -485)" fill="rgba(249,250,248,0.45)" font-size="90" font-family="BRUX-Regular, BRUX" letter-spacing="0.05em"><tspan x="-33.255" y="0">X</tspan></text>
+    <text id="O" transform="translate(1376 -292)" fill="rgba(249,250,248,0.45)" font-size="90" font-family="BRUX-Regular, BRUX" letter-spacing="0.05em"><tspan x="-33.075" y="0">O</tspan></text>
+  </g>
+</svg>
