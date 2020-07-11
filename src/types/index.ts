@@ -1,3 +1,5 @@
-export interface PageProps {
-  machine: any;
+
+export interface SVGBaseProps {
+  width?: number;
+  height?: number;
 }
