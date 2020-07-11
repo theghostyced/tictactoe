@@ -1,6 +1,6 @@
 import React from 'react'
 import Flex from 'atoms/flex'
-import SmallLogo from 'atoms/svgs/SmallLogo'
+import SmallLogo from 'atoms/svgs/smallLogo'
 
 interface IProps {
   hideLeftIcon?: boolean;
