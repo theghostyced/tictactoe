@@ -1,0 +1,64 @@
+@import './core/function';
+
+:root {
+  //
+  // Tins
+  //
+  --yellow-1: #{tint(#ffec06, 40%)};
+  --yellow-2: #ffec06;
+  --yellow-3: #{shade(#ffec06, 10%)};
+  --yellow-4: #8c8207;
+
+  --green-1: #{tint(#acfb5b, 40%)};
+  --green-2: #acfb5b;
+  --green-3: #{shade(#acfb5b, 10%)};
+
+  --orange-1: #{tint(#ffaa46, 40%)};
+  --orange-2: #ffaa46;
+  --orange-3: #{shade(#ffaa46, 10%)};
+
+  --blue-1: #{tint(#0d6afa, 40%)};
+  --blue-2: #0d6afa;
+  --blue-3: #{shade(#0d6afa, 10%)};
+
+  --pink-1: #{tint(#ffadff, 40%)};
+  --pink-2: #ffadff;
+  --pink-3: #{shade(#ffadff, 10%)};
+
+  --purple-1: #{tint(#680dfa, 40%)};
+  --purple-2: #680dfa;
+  --purple-3: #{shade(#680dfa, 10%)};
+
+  //
+  // Grays
+  //
+  --lightest-gray: #f8f8f8;
+  --light-gray: #ededed;
+  --gray: #bdbdbd;
+  --dark-gray: #828282;
+  --darkest-gray: #3e3e3e;
+
+  //
+  // Base
+  //
+  --primary: var(--yellow-2);
+  --secondary: var(--pink-2);
+  --tertiary: var(--purple-2);
+  --white: #ffffff;
+  --black: #000000;
+  --black-diminished: #{tint(#000000, 40%)};
+
+  //
+  // Support
+  //
+  --success: var(--green-2);
+  --success-2: #0b8e1d;
+  --warning: var(--orange-2);
+  --error: #eb5757;
+  --information: var(--blue-2);
+
+  // Layout
+  --layout-background: #26265C;
+  --layout-color: var(--black);
+  --layout-color-hover: var(--black-diminished);
+}
