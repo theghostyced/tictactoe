@@ -11,7 +11,6 @@ interface IProps extends ReactChildrenProps {
 }
 
 const Flex: React.FC<IProps> = ({ children, className = '', justify = 'normal' }) => {
-  console.log('wa', flexStyles, `justify${justify}`)
   return (
     <div
       className={clsx(className, {

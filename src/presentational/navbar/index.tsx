@@ -1,25 +1,27 @@
-import React from 'react'
-import Flex from 'atoms/flex'
-import SmallLogo from 'atoms/svgs/smallLogo'
+import Flex from 'atoms/flex';
+import DownardGhost from 'atoms/svgs/DownardGhost';
+import SmallLogo from 'atoms/svgs/smallLogo';
+import React from 'react';
+
+import navbarStyles from './navbar.module.scss';
 
 interface IProps {
   hideLeftIcon?: boolean;
   hideRightIcon?: boolean;
 }
 
-const Navbar: React.FC<IProps> = ({ hideLeftIcon = false, hideRightIcon = false }) => {
+const Navbar: React.FC<IProps> = ({
+  hideLeftIcon = false,
+  hideRightIcon = false,
+}) => {
   return (
-    <div role="rowgroup">
+    <div className={navbarStyles.navbar} role="rowgroup">
       <Flex justify="spaceBetween">
-        {
-          !hideLeftIcon && (
-            <SmallLogo />
-          )
-        }
-
+        {!hideLeftIcon && <SmallLogo />}
+        {!hideRightIcon && <DownardGhost />}
       </Flex>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
