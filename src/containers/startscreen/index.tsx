@@ -5,6 +5,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { useMachine } from '@xstate/react';
+import Heading from 'atoms/heading';
 
 interface IProps {
   machine: any;
@@ -25,6 +26,7 @@ const StartScreenContainer: React.FC<IProps> = ({ machine }) => {
   return (
     <div role="group">
       <Navbar />
+      <Heading as="h1">Yay</Heading>
       {/* {state.matches(StartScreenMachineStates.START_GAME.toLowerCase()) && (
         <button onClick={handleClick}>Start Game</button>
       )} */}
