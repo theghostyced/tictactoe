@@ -1,15 +1,18 @@
 import React from 'react';
 import { SVGBaseProps } from 'types';
 
-interface IProps extends SVGBaseProps {}
+interface IProps extends SVGBaseProps {
+  style?:  React.CSSProperties | undefined;
+}
 
-const SmallLogo: React.FC<IProps> = ({ width = 51, height = 59 }) => {
+const SmallLogo: React.FC<IProps> = ({ width = 51, height = 59, style }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
       viewBox="0 0 51 59"
+      style={style}
     >
       <g id="Group_4" data-name="Group 4" transform="translate(-7 -8)">
         <rect
