@@ -4,6 +4,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { useMachine } from '@xstate/react';
+import SmallLogo from 'atoms/svgs/smallLogo';
 
 interface IProps {
   machine: any;
@@ -23,7 +24,7 @@ const StartScreenContainer: React.FC<IProps> = ({ machine }) => {
 
   return (
     <div role="group">
-      <h1>Click here to start game</h1>
+      <SmallLogo />
       {state.matches(StartScreenMachineStates.START_GAME.toLowerCase()) && (
         <button onClick={handleClick}>Start Game</button>
       )}

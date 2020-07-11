@@ -1,0 +1,26 @@
+@use 'styles/core/function' as f;
+@use 'styles/core/variables' as *;
+
+.flex {
+  display: flex;
+}
+
+/// Constructing justify content options
+@each $option in $flex-justify-options {
+  .justify-#{f.camel-case($option)} {
+    @if $option == 'start' {
+      justify-content: flex-start;
+    } @else if $option == 'end' {
+      justify-content: flex-end;
+    } @else {
+      justify-content: unquote($option);
+    }
+  }
+}
+
+/// Constructing justify content options
+@each $option in $flex-justify-options {
+  .align-#{f.camel-case($option)} {
+    align-items: unquote($option);
+  }
+}

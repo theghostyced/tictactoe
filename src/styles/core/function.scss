@@ -1,0 +1,57 @@
+// Slightly lighten a color
+// @access public
+// @param {Color} $color - color to tint
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+// Reference: https://css-tricks.com/snippets/sass/tint-shade-functions/
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Slightly darken a color
+// @access public
+// @param {Color} $color - color to shade
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+// Reference: https://css-tricks.com/snippets/sass/tint-shade-functions/
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+// Strips the unit from a number.
+// @access public
+// @argument {number} $value
+// @return {number (unitless)}
+// Reference: https://github.com/thoughtbot/bourbon/blob/v7.0.0/core/bourbon/library/_strip-unit.scss
+@function _strip-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+@function rem($pxval) {
+  $base: 16;
+  $pxval: _strip-unit($pxval);
+
+  @return ($pxval / $base) * 1rem;
+}
+
+@function ratio($val) {
+  @return $val * 8;
+}
+
+/// Camel cases strings with delimeter of '-' e.g some-class = someClass
+/// @param {string} $string
+/// @param {string} $delimeter
+/// @return {string}
+
+@function camel-case($string, $delimeter: '-') {
+  $index: str-index($string, $delimeter);
+
+  @if $index {
+    $case-index: $index + 1;
+    $capitalized: to-upper-case(str-slice($string, $case-index, $case-index));
+
+    @return str-slice($string, 1, $index - 1) + $capitalized + str-slice($string, $case-index + 1);
+  }
+
+  @return $string;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import PlayerSelectContainer from 'containers/playerselect';
 import PlayerSelectMachine from './machine';
 
-const PlayerSelectScreen = () => {
+const PlayerSelectScreen: React.FC = () => {
   return <PlayerSelectContainer machine={PlayerSelectMachine}/>;
 };
 
