@@ -1,14 +1,17 @@
 import React from 'react';
 import { SVGBaseProps } from 'types';
 
-interface IProps extends SVGBaseProps {}
+interface IProps extends SVGBaseProps {
+  style?:  React.CSSProperties | undefined;
+}
 
-const DownardGhost: React.FC<IProps> = ({ width = 59, height = 99 }) => {
+const DownardGhost: React.FC<IProps> = ({ width = 59, height = 99, style }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
+      style={style}
       viewBox="0 0 59 99"
     >
       <g id="Group_3" data-name="Group 3" transform="translate(-288)">

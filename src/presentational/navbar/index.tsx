@@ -17,7 +17,7 @@ const Navbar: React.FC<IProps> = ({
   return (
     <div className={navbarStyles.navbar} role="rowgroup">
       <Flex justify="spaceBetween">
-        {!hideLeftIcon && <SmallLogo />}
+        {!hideLeftIcon && <SmallLogo style={{ marginTop: '10px' }} />}
         {!hideRightIcon && <DownardGhost />}
       </Flex>
     </div>
