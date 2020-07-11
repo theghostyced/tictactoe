@@ -1,14 +1,23 @@
 import React from 'react'
+import Flex from 'atoms/flex'
+import SmallLogo from 'atoms/svgs/SmallLogo'
 
 interface IProps {
   hideLeftIcon?: boolean;
   hideRightIcon?: boolean;
 }
 
-const Navbar: React.FC<IProps> = () => {
+const Navbar: React.FC<IProps> = ({ hideLeftIcon = false, hideRightIcon = false }) => {
   return (
     <div role="rowgroup">
-      
+      <Flex justify="spaceBetween">
+        {
+          !hideLeftIcon && (
+            <SmallLogo />
+          )
+        }
+
+      </Flex>
     </div>
   )
 }
